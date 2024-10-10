@@ -41,7 +41,8 @@ def converter(usd_val):
 
 converter(2)
 '''
-
+'''
+#
 def odd_even():
     num = int(input("Enter a number: "))
     if num % 2 == 0:
@@ -52,3 +53,46 @@ def odd_even():
 
 user = odd_even()
 print(user)
+#
+def my_fun():
+    print("hello fun")
+
+my_fun()
+#
+def my_fun(fname):
+    print(fname + " refsnes")
+
+my_fun("Email")
+my_fun("Tobies")
+my_fun("Linus")
+
+#
+def my_fun(*kids):
+    print("the youngest child is " +kids[2])
+
+my_fun("Email", "Tobies", "Linus")
+#
+def my_fun(child3, child2, child1):
+    print("the youngest child is " + child3)
+
+my_fun(child1 ="Email", child2 ="Tobies", child3 ="Linus")
+
+#
+def my_fun(**kid):
+    print("His last name is " + kid["lname"])
+
+my_fun(fname = "Tobies", lname = "refsnes")
+
+#
+def my_fun(food):
+    for x in food:
+        print(x)
+fruits = ["apple", "banana", "cherry"]
+
+my_fun(fruits)
+#
+def my_fun(x):
+    return 5 * x
+
+print(my_fun(5))
+'''
