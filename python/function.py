@@ -27,6 +27,15 @@ def print_len(list):
 print_len(cities)
 '''
 '''
+def myfuction(food):
+    for x in food:
+        print(x)
+
+fruits = ["apple", "banana", "orange"]
+
+myfuction(fruits)
+'''
+'''
 def calc_fact(n):
     fact = 1
     for i in range(1,n+1):
@@ -113,8 +122,8 @@ class Person :
 p1 = Person("abhi", 22)
 
 p1.Myfun()
-'''
 
+#
 class Person:
     def __init__(self, fname, lname):
         self.fname = fname
@@ -129,5 +138,113 @@ class Student(Person):
 x = Student("abhi", "gaikwad")
 
 x.print_name()
+'''
+'''
+#
+name = ["Pooja", "Rohit", "Punam", "Abhi",]
 
-        
+def find(name):
+    for i in name:
+        if i[0] =="P" or i[0] =="p":
+            print(i)
+
+find(name)
+#
+name = ["abhi","karan","bali", "yogesh", "thokal","shubham"]
+
+def disp(name):
+    for i in name:
+        if len(i) == 4:
+            print(i)
+
+disp(name)
+
+#
+name = ["abhi", "karan"," bali", "yogesh", "thokal","shubham"]
+def previous(L,n):
+    c = -1
+    for i in L:
+        c = c + 1
+        if i.lower() == n.lower():
+            print("index value is ", c)
+            break
+        else:
+            print("name is not found")
+previous(name, "yogesh")
+
+#
+
+L = ["abhi", "bali", 4, 8, "thokal", 9]
+
+c = 0
+
+for i in L:
+    if str(i).isdigit():
+        L[c] = L[c]*3
+        c += 1
+
+print(L)
+
+#
+
+L =[23, 35,44,2.3,41, 33, 11, 55, 63, 77,89,22,44,67]
+
+for i in range(len(L)):
+    if L[i]%2 != 0:
+        L[i] = L[i]+1
+print(L)
+
+#
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def get_avg(self):
+        sum = 0
+        for val in self.marks:
+            sum += val
+        print("hi", self.name, "your avg score is: ",sum/3)
+
+s1 = Student("abhi gaikwad", [89, 76, 90])
+s1.get_avg()
+
+#
+class Account:
+    def __init__(self, bal, acc):
+        self.balance = bal
+        self.account = acc
+
+    def debit(self, amount):
+        self.balance -= amount
+        print("Rs. ", amount, "was debited")
+        print("total balance = ", self.get_balance())
+
+    def credit(self, amount):
+        self.balance += amount
+        print("Rs. ", amount, "was credit")
+        print("total balance = ",self.get_balance())
+    def get_balance(self):
+        return self.balance
+
+acc1 = Account(10000, 156342)
+
+acc1.debit(1000)
+
+acc1.credit(500)
+'''
+
+class Cricle:
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def area(self):
+        return (22/7) * self.radius ** 2
+
+    def perimeter(self):
+        return 2 * (22/7) * self.radius
+
+c1 = Cricle(21)
+
+print(c1.area())
+print(c1.perimeter())
